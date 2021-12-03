@@ -6,7 +6,7 @@ import java.lang.Exception
 private const val fileName = "day2.txt"
 private val lines = readLines(fileName)
 
-val testInput = """
+private val testInput = """
     forward 5
     down 5
     forward 8
