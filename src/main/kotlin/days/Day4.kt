@@ -3,8 +3,8 @@ package days
 import functions.readLines
 
 private const val fileName = "day4.txt"
-private val lines = readLines(fileName)
-private val testData = """
+private val input = readLines(fileName)
+private val testInput = """
 7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1
 
 22 13 17 11  0
@@ -67,17 +67,17 @@ private fun parseBoards(lines: List<String>): List<Board> {
 }
 
 fun main() {
-    val numbers = lines.first().split(",").map { it.toInt() }
-    val boards = parseBoards(lines)
+    val numbers = input.first().split(",").map { it.toInt() }
+    val boards = parseBoards(input)
     for (num in numbers) {
         val result = boards.map { it.mark(num) }.firstOrNull { it is State.Bingo } ?: State.Playing
         if (result is State.Bingo) {
-            println("Oppg1: ${result.score} $num")
+            println("Task1: ${result.score} $num")
             break;
         }
     }
 
-    var activeBoards = parseBoards(lines)
+    var activeBoards = parseBoards(input)
     var singleBoard: Board? = null
     for (num in numbers) {
         if (singleBoard == null) {
@@ -91,7 +91,7 @@ fun main() {
         } else {
             val result = singleBoard.mark(num)
             if (result is State.Bingo) {
-                println("Oppg2: ${result.score} $num")
+                println("Task2: ${result.score} $num")
                 break;
             }
         }

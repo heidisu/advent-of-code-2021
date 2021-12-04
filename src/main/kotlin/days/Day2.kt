@@ -4,8 +4,7 @@ import functions.readLines
 import java.lang.Exception
 
 private const val fileName = "day2.txt"
-private val lines = readLines(fileName)
-
+private val input = readLines(fileName)
 private val testInput = """
     forward 5
     down 5
@@ -32,17 +31,17 @@ fun toPosition(pair: Pair<String, Int>): Position {
 }
 
 fun main() {
-    val oppg1 =
-        lines
+    val task1 =
+        input
             .map { parse(it) }
             .map { toPosition(it) }
             .fold(Pair(0, 0)){ acc, pos -> Pair(acc.first + pos.horizontal, acc.second + pos.depth)}
             .let { it.first * it.second }
-    println(oppg1)
+    println("Task1: $task1")
 
 
-    val oppg2 =
-        lines
+    val task2 =
+        input
             .map { parse(it) }
             .fold(Triple(0, 0, 0)) { acc, pos ->
                 when (pos.first) {
@@ -53,5 +52,5 @@ fun main() {
                 }
             }
             .let { it.first * it.second }
-    println(oppg2)
+    println("Task2: $task2")
 }

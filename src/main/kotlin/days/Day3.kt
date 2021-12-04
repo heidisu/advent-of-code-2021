@@ -3,8 +3,8 @@ package days
 import functions.readLines
 
 private const val fileName = "day3.txt"
-private val lines = readLines(fileName)
-private val linesTest =
+private val input = readLines(fileName)
+private val testInput =
     """
 00100
 11110
@@ -51,13 +51,13 @@ fun whatNumber(input: List<String>, idx: Int, comparator: (Int, Int) -> Boolean)
 }
 
 fun main() {
-    val (gamma, epsilon) = gammaEpsilon(lines)
-    val oppg1 = Integer.parseInt(gamma, 2) * Integer.parseInt(epsilon, 2) // 2595824
-    println("Oppg 1: $oppg1") // 2595824
+    val (gamma, epsilon) = gammaEpsilon(input)
+    val task1 = Integer.parseInt(gamma, 2) * Integer.parseInt(epsilon, 2) // 2595824
+    println("Task1: $task1") // 2595824
 
-    var oxygenLines = lines
-    var co2Scrubber = lines
-    for (idx in 0 until lines.first().length) {
+    var oxygenLines = input
+    var co2Scrubber = input
+    for (idx in 0 until input.first().length) {
         if (oxygenLines.size > 1) {
             oxygenLines =
                 oxygenLines.filter { it[idx] == whatNumber(oxygenLines, idx) { ones, zeroes -> ones >= zeroes } }
@@ -68,6 +68,6 @@ fun main() {
         }
     }
 
-    val oppg2 = Integer.parseInt(oxygenLines.first(), 2) * Integer.parseInt(co2Scrubber.first(), 2)
-    println("Oppg2: $oppg2") // 2135254
+    val task2 = Integer.parseInt(oxygenLines.first(), 2) * Integer.parseInt(co2Scrubber.first(), 2)
+    println("Task2: $task2") // 2135254
 }
