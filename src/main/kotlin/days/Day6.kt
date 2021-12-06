@@ -71,12 +71,12 @@ fun parseInput(line: String): List<Int> {
 
 fun main() {
     val ocean = Ocean(parseInput(input.first()))
-    repeat((1..80).count()) { ocean.step() }
+    repeat(80) { ocean.step() }
     val task1 = ocean.count()
     println("Task1: $task1") // 388739
 
     val efficientFish = EfficientFish(parseInput(input.first()))
-    repeat((1 .. 256).count()) { efficientFish.step() }
+    repeat(256) { efficientFish.step() }
     val task2 = efficientFish.count()
     println("Task2: $task2") // 1741362314973
 }
