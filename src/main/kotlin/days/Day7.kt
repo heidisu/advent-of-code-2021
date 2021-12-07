@@ -13,8 +13,8 @@ fun main() {
     val numbers = input.first().split(",").map { it.toInt() }
     val min = numbers.minOf { it }
     val max = numbers.maxOf { it }
-    val task1 = (min .. max).map{i -> numbers.map { n -> (n - i).absoluteValue }.sum()}.minOf { it }
+    val task1 = (min .. max).map{i -> numbers.sumOf { n -> (n - i).absoluteValue } }.minOf { it }
     println("Task1: $task1") //331067
-    val task2 = (min .. max).map{ i -> numbers.map { n -> (1.. (n - i).absoluteValue).sum() }.sum()}.minOf { it }
+    val task2 = (min .. max).map{ i -> numbers.sumOf { n -> (1..(n - i).absoluteValue).sum() } }.minOf { it }
     println("Task2: $task2") //92881128
 }
