@@ -3,10 +3,12 @@ package tools
 import java.io.File
 import java.time.LocalDate
 
-private val day = LocalDate.now().dayOfMonth
+private val day = LocalDate.now().dayOfMonth + 1
 
 val dataResourcePath = "src/main/resources/day$day.txt"
 val codePath = "src/main/kotlin/days/Day$day.kt"
+val readmePath = "README.md"
+
 val codeContent = """
     package days
 
@@ -26,11 +28,15 @@ val codeContent = """
     }
 """.trimIndent()
 
+private val readmeLine = "| [Day $day](src/main/kotlin/days/Day$day.kt) |"
+
 fun main() {
-    val resouceFile = File(dataResourcePath)
-    resouceFile.createNewFile()
+    val resourceFile = File(dataResourcePath)
+    resourceFile.createNewFile()
     val kotlinFile = File(codePath)
     kotlinFile.createNewFile()
     kotlinFile.writeText(codeContent)
+    val readmeFile = File(readmePath)
+    readmeFile.appendText(readmeLine)
 
 }
