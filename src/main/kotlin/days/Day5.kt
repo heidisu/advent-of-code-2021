@@ -1,5 +1,6 @@
 package days
 
+import common.Point
 import functions.readLines
 import kotlin.math.absoluteValue
 
@@ -18,7 +19,6 @@ private val testInput = """
     5,5 -> 8,2
 """.trimIndent().lines()
 
-data class Point(val x: Int, val y: Int)
 data class LineSegment(val startPoint: Point, val endPoint: Point) {
     fun isHorizontalOrVertical(): Boolean {
         return startPoint.x == endPoint.x || startPoint.y == endPoint.y

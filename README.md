@@ -10,3 +10,4 @@
 | [Day 6](src/main/kotlin/days/Day6.kt) |
 | [Day 7](src/main/kotlin/days/Day7.kt) |
 | [Day 8](src/main/kotlin/days/Day8.kt) |
+| [Day 9](src/main/kotlin/days/Day9.kt) |
