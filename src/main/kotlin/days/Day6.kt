@@ -56,7 +56,7 @@ private class EfficientFish(numbers: List<Int>) {
         for (i in 1..8) {
             fishArray[i - 1] = fishArray[i]
         }
-        fishArray[6] = fishArray[6] + newFish
+        fishArray[6] += newFish
         fishArray[8] = newFish
     }
 
