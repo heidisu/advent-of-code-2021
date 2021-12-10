@@ -14,7 +14,7 @@ private val testInput = """
     forward 2
 """.trimIndent().lines()
 
-fun parse(line: String): Pair<String, Int> {
+private fun parse(line: String): Pair<String, Int> {
      val words = line.split(' ')
     return Pair(words[0], words[1].toInt())
 }
