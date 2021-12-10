@@ -3,7 +3,7 @@ package tools
 import java.io.File
 import java.time.LocalDate
 
-private val day = LocalDate.now().dayOfMonth + 1
+private val day = LocalDate.now().dayOfMonth
 
 val dataResourcePath = "src/main/resources/day$day.txt"
 val codePath = "src/main/kotlin/days/Day$day.kt"
