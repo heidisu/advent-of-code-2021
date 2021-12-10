@@ -28,15 +28,23 @@ val codeContent = """
     }
 """.trimIndent()
 
-private val readmeLine = "| [Day $day](src/main/kotlin/days/Day$day.kt) |"
+private val readmeLine = "\n| [Day $day](src/main/kotlin/days/Day$day.kt) |"
 
 fun main() {
     val resourceFile = File(dataResourcePath)
-    resourceFile.createNewFile()
+    if (!resourceFile.exists()) {
+        resourceFile.createNewFile()
+    }
+
     val kotlinFile = File(codePath)
-    kotlinFile.createNewFile()
-    kotlinFile.writeText(codeContent)
+    if (!kotlinFile.exists()) {
+        kotlinFile.createNewFile()
+        kotlinFile.writeText(codeContent)
+    }
+
     val readmeFile = File(readmePath)
-    readmeFile.appendText(readmeLine)
+    if(!readmeFile.readText().contains(readmeLine)) {
+        readmeFile.appendText(readmeLine)
+    }
 
 }
