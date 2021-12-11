@@ -17,7 +17,7 @@ fun toArray(testInput: List<String>): Array<Array<Int>> {
     return testInput.map { l -> l.toList().map { it.toString().toInt() }.toTypedArray() }.toTypedArray()
 }
 
-fun getNeighbours(point: Point, width: Int, height: Int): List<Point> {
+private fun getNeighbours(point: Point, width: Int, height: Int): List<Point> {
     return listOf(0 to 1, 0 to -1, 1 to 0, -1 to 0)
         .map { (x, y) -> Point(x + point.x, y + point.y) }
         .filter { (x, y) -> x in 0 until width && y in 0 until height }
@@ -56,7 +56,7 @@ fun main() {
     val arr = toArray(input)
     val minima = findMinima(arr)
     val task1 = minima.sumOf { it.second + 1 }
-    println("Task1: $task1")
+    println("Task1: $task1") // 631
 
     val width = arr.size
     val height = arr[0].size
