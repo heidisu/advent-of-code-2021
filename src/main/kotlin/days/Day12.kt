@@ -94,6 +94,6 @@ fun main() {
     println("Task1: $task1") // 5178
 
     val task2 =
-        searchPaths(map, mutableListOf(), listOf(mutableListOf("start"))) { str, lst -> allowedLowerCase(str, lst) }.size
+        searchPaths(map, emptyList(), listOf(listOf("start"))) { str, lst -> allowedLowerCase(str, lst) }.size
     println("Task2: $task2") // 130094
 }
