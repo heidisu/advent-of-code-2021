@@ -83,8 +83,8 @@ private fun searchPaths(
     }
 }
 
-private fun allowedLowerCase(c: String, path: List<String>): Boolean {
-    return path.count { it == c } == 0
+private fun allowedLowerCase(cave: String, path: List<String>): Boolean {
+    return !path.contains(cave)
             || path.filter { it == it.lowercase() }.groupingBy { it }.eachCount().values.count { it > 1 } == 0
 }
 
