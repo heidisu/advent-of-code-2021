@@ -67,9 +67,9 @@ private fun print(arr: Array<Array<Int>>) {
     for (j in 0 until height) {
         for (i in 0 until width) {
             if (arr[i][j] == 0) {
-                print("-")
+                print(".")
             } else {
-                print("X")
+                print("#")
             }
         }
         println()
