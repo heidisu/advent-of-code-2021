@@ -1,7 +1,7 @@
 package days
 
 import common.Point
-import functions.readLines
+import common.readLines
 import kotlin.math.absoluteValue
 
 private const val fileName = "day5.txt"

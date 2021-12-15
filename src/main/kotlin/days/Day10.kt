@@ -1,6 +1,6 @@
 package days
 
-import functions.readLines
+import common.readLines
 import java.util.*
 import kotlin.IllegalArgumentException
 

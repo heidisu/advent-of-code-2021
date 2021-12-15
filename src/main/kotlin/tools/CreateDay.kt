@@ -12,7 +12,7 @@ val readmePath = "README.md"
 val codeContent = """
     package days
 
-    import functions.readLines
+    import common.readLines
 
     private const val fileName = "day$day.txt"
     private val input = readLines(fileName)

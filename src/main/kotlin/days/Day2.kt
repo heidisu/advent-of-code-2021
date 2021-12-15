@@ -1,6 +1,6 @@
 package days
 
-import functions.readLines
+import common.readLines
 import java.lang.Exception
 
 private const val fileName = "day2.txt"

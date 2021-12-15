@@ -1,7 +1,7 @@
 package days
 
 import common.Point
-import functions.readLines
+import common.readLines
 
 private const val fileName = "day11.txt"
 private val input = readLines(fileName)

@@ -1,7 +1,8 @@
 package days
 
 import common.Point
-import functions.readLines
+import common.print
+import common.readLines
 
 private const val fileName = "day15.txt"
 private val input = readLines(fileName)
@@ -58,17 +59,6 @@ fun getNeighbours(current: Point, unvisited: MutableSet<Point>): List<Point> {
     val y = current.y
     val neighbours = listOf(Point(x, y + 1), Point(x, y - 1), Point(x + 1, y), Point(x - 1, y))
     return unvisited.filter { neighbours.contains(it) }
-}
-
-fun printArr(arr: Array<Array<Int>>) {
-    val rows = arr.size
-    val cols = arr[0].size
-    for (i in 0 until rows) {
-        for (j in 0 until cols) {
-            print("${arr[i][j]} ")
-        }
-        println()
-    }
 }
 
 fun bigger(arr: Array<Array<Int>>): Array<Array<Int>> {

@@ -1,6 +1,6 @@
 package days
 
-import functions.readLines
+import common.readLines
 
 private const val fileName = "day6.txt"
 private val input = readLines(fileName)

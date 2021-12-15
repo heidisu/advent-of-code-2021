@@ -1,7 +1,7 @@
 package days
 
 import common.Point
-import functions.readLines
+import common.readLines
 import java.lang.IllegalArgumentException
 
 private const val fileName = "day13.txt"
