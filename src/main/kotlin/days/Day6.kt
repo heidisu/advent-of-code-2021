@@ -65,7 +65,7 @@ private class EfficientFish(numbers: List<Int>) {
     }
 }
 
-fun parseInput(line: String): List<Int> {
+private fun parseInput(line: String): List<Int> {
     return line.split(",").map { it.toInt() }
 }
 
