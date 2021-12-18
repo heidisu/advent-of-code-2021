@@ -19,3 +19,4 @@
 | [Day 15](src/main/kotlin/days/Day15.kt) |
 | [Day 16](src/main/kotlin/days/Day16.kt) |
 | [Day 17](src/main/kotlin/days/Day17.kt) |
+| [Day 18](src/main/kotlin/days/Day18.kt) |
