@@ -18,7 +18,7 @@ private val testInput = """
     5283751526
 """.trimIndent().lines()
 
-fun parseInput(lines: List<String>): Array<Array<Int>> {
+private fun parseInput(lines: List<String>): Array<Array<Int>> {
     return lines.map { l -> l.toList().map { it.toString().toInt() }.toTypedArray() }.toTypedArray()
 }
 
