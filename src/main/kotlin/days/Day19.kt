@@ -1,5 +1,6 @@
 package days
 
+import common.Point3d
 import common.readLines
 
 private const val fileName = "day19.txt"
@@ -59,9 +60,6 @@ private val testInput = """
     755,-354,-619
     553,889,-390
 """.trimIndent().lines()
-
-data class Point3d(val x: Int, val y: Int, val z: Int)
-
 data class Scanner(val id: Int, val points: List<Point3d>)
 
 private fun parseInput(lines: List<String>): List<Scanner>{
