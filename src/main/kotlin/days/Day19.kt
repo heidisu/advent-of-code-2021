@@ -64,15 +64,28 @@ data class Scanner(val id: Int, val points: List<Point3d>)
 
 private fun parseInput(lines: List<String>): List<Scanner>{
     val scanners = mutableListOf<Scanner>()
+    var id = 0
+    var points = mutableListOf<Point3d>()
     for(line in lines){
-
+        if (line.isEmpty()){
+            scanners.add(Scanner(id, points))
+            points = mutableListOf()
+        }
+        else if (line.startsWith("---")){
+            id = Integer.parseInt(line.split(" ")[2])
+        }
+        else {
+            val coords = line.split(",")
+            points.add(Point3d(x = Integer.parseInt(coords[0]), y = Integer.parseInt(coords[1]), z = Integer.parseInt(coords[2])))
+        }
     }
+    scanners.add(Scanner(id, points))
 
     return scanners
 }
 
 fun main() {
-    val task1 = ""
+    val task1 = parseInput(testInput)
     println("Task1: $task1")
     val task2 = ""
     println("Task2: $task2")

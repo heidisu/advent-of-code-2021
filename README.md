@@ -4,7 +4,7 @@ https://adventofcode.com/
 
 
 | Days                                  | Title                   | Keywords                  | Progress |
-|---------------------------------------|-------------------------|---------------------------|----------|
+|---------------------------------------|-------------------------|---------------------------|---------|
 | [Day 1](src/main/kotlin/days/Day1.kt) | Sonar Sweep             | Windowed lists            | ⭐⭐ |
 | [Day 2](src/main/kotlin/days/Day1.kt) | Dive!                   |                           | ⭐⭐ |
 | [Day 3](src/main/kotlin/days/Day1.kt) | Binary Diagnostic       | binary                    | ⭐⭐ |
@@ -27,3 +27,4 @@ https://adventofcode.com/
 | [Day 20](src/main/kotlin/days/Day20.kt) | Trench Map              | image enhancement         | ⭐⭐ |
 | [Day 21](src/main/kotlin/days/Day21.kt) |                         |                           | ⭐ |
 | [Day 22](src/main/kotlin/days/Day22.kt) |                         |                           | ⭐ |
+| [Day 25](src/main/kotlin/days/Day25.kt) |                         |                           | ⭐ |
