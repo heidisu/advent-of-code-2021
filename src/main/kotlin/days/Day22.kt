@@ -116,7 +116,7 @@ fun main() {
     val cubes = input.mapNotNull { parseCube(it) }
         .fold(emptySet<Point3d>()) { acc, (m, points) -> if (m == "on") acc.union(points) else acc.minus(points) }
     val task1 = cubes.count()
-    println("Task1: $task1")
+    println("Task1: $task1") // 589411
     val task2 = ""
     println("Task2: $task2")
 }
