@@ -3,7 +3,7 @@
 https://adventofcode.com/
 
 
-| Days                                  | Title                   | Keywords                                            | Progress |
+| Day                                   | Title                   | Keywords                                            | Progress |
 |---------------------------------------|-------------------------|-----------------------------------------------------|---------|
 | [Day 1](src/main/kotlin/days/Day1.kt) | Sonar Sweep             | Windowed lists                                      | ⭐⭐ |
 | [Day 2](src/main/kotlin/days/Day1.kt) | Dive!                   |                                                     | ⭐⭐ |
